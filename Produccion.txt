@@ -49,7 +49,7 @@ por lo que hacemos git add .\package.json para despues hacerle un commit
 git commit -m "Agregamos package.json"
 
 .gitignore: Para que github ignore depende que archivos, en nuestro caso los node_modules
-por eso creamos un archivo .gitignore y dentro metemos /node_modules
+por eso creamos un archivo .gitignore y dentro metemos /node_modules (Con / los directorios y los archivos con su nombre y ya)
 Ahora que tenemos ignorado todo lo que no queremos subir e vez de tener que ir subiendo archivo a archivo
 hacemos git add . y se suben todos.
 
@@ -92,4 +92,7 @@ Creamos .env --> Metemos dentro el puerto que queremos.
 Y en nuestra aplicacion ponemos --> require('dotenv').config() --> Añade a env el atributo PORT = 4000
 Cambiamos en el index el puerto del que estamos escuchando a server.listen(process.env.PORT)
 Entonces en nuestra maquina el puerto será el 4000 pero cuando llegue a produccion será lo que defina render.com
+
+IMPORTANTE meter en el gitignore el .env porque podemos tener informacion sensible.
+
 

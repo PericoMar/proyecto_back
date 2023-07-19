@@ -16,8 +16,7 @@ const PORT =  process.env.PORT
 
 server.listen(PORT , function() {
     console.log("Aplicacion corriendo en el puerto : " + PORT)
-}
-) // Nuestro servidor debe de "escuchar" un determinado puerto (lo pasamos por parametros)
+}) // Nuestro servidor debe de "escuchar" un determinado puerto (lo pasamos por parametros)
 //Para probar hacemos una peticion de red a nuestra propia maquina (localhost) y con el puerto 4000 que es el
 //que hemos puesto localhost:4000
 
