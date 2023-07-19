@@ -6,11 +6,12 @@
   "author": "Pedro Martinez Gonzalez <pericomarytb@gmail.com>",
   "license": "MIT",
   "private": false,
-  "scripts" : {
-    "dev" : "nodemon index.js",
-    "start" : "node index.js"
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "devDependencies": {
+    "dotenv": "^16.3.1",
     "nodemon": "^3.0.1"
   }
 }

@@ -50,5 +50,46 @@ git commit -m "Agregamos package.json"
 
 .gitignore: Para que github ignore depende que archivos, en nuestro caso los node_modules
 por eso creamos un archivo .gitignore y dentro metemos /node_modules
+Ahora que tenemos ignorado todo lo que no queremos subir e vez de tener que ir subiendo archivo a archivo
+hacemos git add . y se suben todos.
 
+Propiedad "scripts" del package.json:
+Los scripts son sentencias que podemos utilizar usando Yarn, que recordemos que fue la misma aplicacion
+que nos dio el package.json y ademas donde instalamos nodemon.
+Añadimos al JSON un "scripts": { "dev" : "nodemon index.js" } Aqui utilizamos la libreria de nodemon
+Si nosotros ponemos nodemon index.js directamente en la terminal no hace lo que queremos
+por eso a partir de yarn usamos: yarn dev y ahora si se levanta nuestro servidor de desarrollo y actualiza los cambios.
+yarn dev --> 
+yarn run v1.22.19
+$ nodemon index.js
+[nodemon] 3.0.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node index.js`
+
+
+git push github (nuestro reporsitorio remoto) main (que es la rama en la que estamos (branch), al principio a 
+mi me aparecia como rama predeterminada branch master pero lo cambie con el comando: git branch -M main)
+--> Ya tenemos en github nuestros archivos.
+Se puede hacer con git push -u github main, para que quede seteado que se van a hacer los push al repositorio de github de la rama
+main y asi cada vez que hagamos un push solo tenemos que poner git push.
+
+
+Ahora nesecitamos vincular los dos servicios, donde tenemos nuestro repositorio y el servidor en si.
+lo hacemos en render (gratuito). Conectamos con github y elegimos el repositorio en nuestro caso proyecto_back
+Build command -- yarn
+Start command -- yarn start (Al principio no existe, para cambiar eso nos vamos al package.json 
+y dentro de scripts metemos "start" : "node index.js" ) -->
+Jul 19 09:02:34 PM  ==> Starting service with 'yarn start'
+Jul 19 09:02:36 PM  yarn run v1.22.5
+Jul 19 09:02:36 PM  $ node index.js
+Ahora render se queda como cargando porque si recordamos nosotros estabamos escuchando server.listen(Un puerto cualquiera), pero eso a render
+no le vale tenemos usar un puerto en concreto (El atributo PORT de env de process), para ello añadimos otra libreria en este caso 
+dotenv (npm dotenv en google para conocer mas sobre la libreria):
+yarn add dotenv -D (Se nos mete como dependencia en el package.json)
+Creamos .env --> Metemos dentro el puerto que queremos.
+Y en nuestra aplicacion ponemos --> require('dotenv').config() --> Añade a env el atributo PORT = 4000
+Cambiamos en el index el puerto del que estamos escuchando a server.listen(process.env.PORT)
+Entonces en nuestra maquina el puerto será el 4000 pero cuando llegue a produccion será lo que defina render.com
 
