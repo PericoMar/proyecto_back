@@ -1,0 +1,24 @@
+GIT:
+Nos ayuda a subirlo a Github
+Sistema de control de versiones.
+Se instala simple y comprobamos en la terminal con git --version
+
+1.- Inicializar un repositorio de git de nuestro proyecto --> git init
+Se genera un directorio oculto en donde hayamos incializado el repositorio (.git)
+
+Podemos tener algo en produccion y mientras trabajar en una nueva funcionalidad en paralelo,
+se llaman ramas (branch) para que cuando este terminada la unimos/mercheamos (ingit).
+Para ver las distintas ramas que tiene nuestro codigo es: git branch (enseña solo las que hayan hecho cambios)
+git branch --show-current enseña la rama en la que estamos
+
+git status --> Nos habla del estatus de nuestro proyecto
+
+git commit -m "Primer commit" --> Para hacer un commit, con -m podemos poner un mensaje
+
+Yarn (npm install --global yarn): 
+Nos permite gestionar las dependencias de nuestro proyecto.
+Para agregar las librerias de terceros.
+
+yarn init --> Pide nombre del proyecto, version, 
+
+

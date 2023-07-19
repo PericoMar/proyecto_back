@@ -1,0 +1,37 @@
+https://link.excalidraw.com/readonly/xjg3Lpdbd8LeN7GLKg25
+
+Frontend:
+Como los archivos de JS tienen que viajar constantatemente hacia
+navegadores y esos navegadores pueden estar conectados un red de internet lenta, el tamñao de esos archivos importa
+cuando escribimos condigo de frontend el codigo final que llevemos a produccion debe ser lo mas chico posible
+para que el tiempo que tarda en llegar al cliente final sea el mas corto posible
+Para solucionar esto podemos usar Webpack que hace tu codigo mas chico y permite que viaje a mas velocidad
+
+
+Otra cosa que podria ser un problema es que los navegadores que usen los clientes pueden tener
+diferentes versiones y JS a ido evolucionando. Puede haber un problema de compatibilidad. 
+Para solucionar esto se puede usar BABEL que pasa los codigos de versiones mas nuevas a mas antiguas
+
+Usamos codigo de terceros (dependencias) --> Node Package Manager: Reporsitorio de codigo
+Webpack lo que hace con algunas libreria es coger el codigo de la libreria y quedarse solo con lo que usamos. 
+(Bundlephobia te dice cuando ocupa cada paquete que usamos de NPM)
+
+Cuando usar librerias de 3ros?
+- Dependiendo de la dificultad de escribir el codigo que queremos usar.
+- Confianza
+- Importancia Funcionalidad
+- Tipo de proyecto:  
+- Tamaño
+
+Conclusion:
+Webpack minificar nuestro codigo para que vaya mas rapido
+BABEL pasa el codigo a versiones mas antiguas para que todo el mundo pueda verlo
+Can I use --> Pagina web que nos dice la compaatibilidad de las distintas libreria que usamos en los distintos navegadores
+
+
+
+
+
+
+
+

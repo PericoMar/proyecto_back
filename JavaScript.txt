@@ -1,0 +1,47 @@
+var (Deprecated, son variables que estan solo mientras se interpreta la funcion donde se crearon), let, const
+
+require --> funcion con un solo parametro, busca la propiedad exports del objeto module de cada archivo
+el objeto module (objeto global de NodeJS) de cada archivo es el archivo en si.
+Si pintamos el objeto module por pantalla nos devolvera:
+{
+  module: Module {
+    id: '.',
+    path: 'C:\\Users\\antonio\\Desktop\\PERICO\\Proyecto',
+    exports: {}, //LO QUE QUIERES QUE SEA ACCESIBLE DESDE OTRO SITIO, PARA PODER COGERLO CON require
+    filename: 'C:\\Users\\antonio\\Desktop\\PERICO\\Proyecto\\index.js',
+    loaded: false,
+    children: [],
+    paths: [
+      'C:\\Users\\antonio\\Desktop\\PERICO\\Proyecto\\node_modules',
+      'C:\\Users\\antonio\\Desktop\\PERICO\\node_modules',
+      'C:\\Users\\antonio\\Desktop\\node_modules',
+      'C:\\Users\\antonio\\node_modules',       
+      'C:\\Users\\node_modules',
+      'C:\\node_modules'
+    ]
+  }
+}
+
+module.exports = "Exporto lo que quiero y esto es lo que quiero que la gente reciba con require"
+
+
+DATOS:  
+Primitivos (typeof palabra reservada que devuelve el tipo de dato)
+- string
+- number
+- boolean
+- null
+- undefined (declaramos una variable y no la inicializamos)
+- symbol (no se suele ver)
+
+Referenciales
+- Objetos -- typeof object
+- Arrays --> typeof object
+    .map
+    .filter
+    .find
+    .froEach
+    .reduce
+    .some
+    .any
+- Functions --> typeof functions
