@@ -1,0 +1,12 @@
+{
+  "name": "personal-proyect",
+  "version": "1.0.0",
+  "description": "\"Mi primer proyecto como aprendiz web\"",
+  "main": "index.js",
+  "author": "Pedro Martinez Gonzalez <pericomarytb@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
