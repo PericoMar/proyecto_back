@@ -19,6 +19,36 @@ Yarn (npm install --global yarn):
 Nos permite gestionar las dependencias de nuestro proyecto.
 Para agregar las librerias de terceros.
 
-yarn init --> Pide nombre del proyecto, version, 
+yarn init --> Pide nombre del proyecto, version, descripcion, etc.. Nos crea un JSON, package.json.
+
+NodeMon --> En desarrollo nuestro servidor se reincie cada vez que hagamos cambios
+yarn add nodemon -D --> Para añadir una libreria, se añade un elemento mas a nuestro JSON, que en este
+caso seria devDependencies { "nodemon": "^3.0.1" } Porque ahora nuestro desarrollo depende de esta libreria
+Se nos ha añadido ademas al proyecto una carpeta con todas las librerias que dependemos porque nodemon depende de otras más.
+
+GutHub:
+Creamos nuevo repositorio (proyecto_back)
+create a new repository on the command line
+echo "# proyecto_back" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/PericoMar/proyecto_back.git
+git push -u origin main
+
+…or push an existing repository from the command line EN NUESTRO CASO USAREMOS ESTE.
+git remote add origin(lo cambiamos por github porque es mas intuitivo) https://github.com/PericoMar/proyecto_back.git
+git branch -M main
+git push -u origin(lo cambiamos por github) main (para empujar los archivos)
+
+git remote --> github
+
+git status --> No esta subido el package JSON donde pone nuestras dependencias
+por lo que hacemos git add .\package.json para despues hacerle un commit
+git commit -m "Agregamos package.json"
+
+.gitignore: Para que github ignore depende que archivos, en nuestro caso los node_modules
+por eso creamos un archivo .gitignore y dentro metemos /node_modules
 
 
