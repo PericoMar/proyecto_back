@@ -1,4 +1,5 @@
 /node_modules
-/Anotaciones.txt
-/JavaScript.txt
-/Produccion.txt
+Anotaciones.txt
+JavaScript.txt
+Produccion.txt
+.env
