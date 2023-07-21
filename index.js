@@ -2,10 +2,33 @@ require('dotenv').config()
 const http = require("http") /* module.exports de HTTP que es una libreria de NodeJS que necesitamos
                             Usamos la función require para poder meterla en 
                             la constante (const) http (objeto)*/
+const fs = require("fs");
+
 // console.log({module})
 // module.exports = "Exporto lo que quiero"
 
-function requestController() {
+function requestController(req,res) { //req --> request , res --> response
+    const url =  req.url;
+    const method = req.method;
+    console.log({url , method})
+
+    if(method === "GET" && url ==="/"){
+        res.setHeader("Content-type", "text/html; charset=utf-8")
+        fs.readFile("./public/index.html", function(err, file){
+            if(err){
+                console.log("Hubo un ERROR")
+            }
+            res.write(file)
+            res.end()
+        })
+        
+    } else {
+        res.setHeader("Content-type", "text/html; charset=utf-8")
+        res.write("<h1>Pagina no encontrada :(</h1>")
+        res.end() 
+    }
+
+    
     console.log("Recibimos una request");
 }
 //Cofigurar nuestro servidor    
