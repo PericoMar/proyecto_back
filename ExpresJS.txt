@@ -1,0 +1,17 @@
+ExpressJS es un framework de NodeJS que nos facilita el desarrollo de un servidor y el gestionar las rutas.
+
+Por ejemplo con NodeJS teniamos una funcion requestControler que la llamabamos cada vez que
+llegara una request a nuestro servidor y dentro de esa funcion con los atributos de request (method y url)
+gestinabamos todo.
+
+Ahora con Express no hace falta:
+const express = require('express') /*Requiere la libreria,  hay que instalarla (yarn add express) se añadira a 
+el package.json*/
+const app = express()
+
+Con estas lineas de codigo metemos en app una Aplicacion y a apartir de eso con el metodo app.get() 
+gestionamos todo.
+
+
+Servir archivos estaticos:
+app.use(express.static("public"))

@@ -1,0 +1,25 @@
+"request" y "response" son términos utilizados en el mundo de la programación para referirse 
+a la comunicación entre un servidor y un cliente en una aplicación web.
+
+Cuando un cliente (como un navegador web) desea obtener información o realizar una acción 
+en un servidor (como obtener una página web o enviar datos), envía una solicitud (request) 
+al servidor. Esta solicitud contiene información sobre lo que el cliente quiere hacer y los datos que necesita del servidor.
+
+El servidor recibe esta solicitud y la procesa. La función "requestController" es una parte del servidor que 
+se encarga de manejar las solicitudes recibidas. El parámetro "req" (request) en la función contiene toda la 
+información sobre la solicitud del cliente, incluida la URL (dirección) que está solicitando y el método HTTP 
+que se está utilizando para realizar la solicitud.
+
+    El atributo "url": Representa la dirección específica a la que el cliente está solicitando acceder. Por ejemplo, si un cliente desea acceder a la página de inicio de un sitio web, la URL puede ser algo como "https://www.example.com/".
+
+    El atributo "method": Indica el tipo de solicitud que el cliente está realizando. Los métodos más comunes son GET (para obtener información), POST (para enviar información al servidor), PUT (para actualizar información), DELETE (para eliminar información), entre otros.
+
+Una vez que el servidor ha procesado la solicitud, genera una respuesta (response) que contiene la información solicitada o el resultado de la acción solicitada. Luego, esta respuesta se envía de vuelta al cliente.
+
+Libreria fs de NodeJS:
+fs --> File System
+Para no responder con un simple res.write("<h1>Hola pagina principal</h1>") tenemos que acceder
+al sistema de archivos (dentro del public tenemos nuestro index.html) y eso lo hacemos gracias a "fs".
+const fs = require("fs");
+fs.readFile("ruta del fichero a leer" , callback --> funcion que queremos que se ejecute una vez leido el fichero, 
+tiene dos parametros 1.- err --> Error en la lectura del fichero. 2.- file --> Fichero en si)

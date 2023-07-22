@@ -1,0 +1,21 @@
+Truthy - Falsy:
+if(err){
+                console.log("Hubo un ERROR" , {err})
+}
+Como el err va a ser tratado en un contexto booleano, tomará un valor True o False.
+En este caso como no si no hay error --> err : null --> Falsy, si no es null es Truthy
+
+Listado de valores que dan Falsy:
+a\ null
+b\ undefined
+c\ ""
+d\ 0
+e\ False
+f\ NaN
+
+Operador ternario:
+(Condicion) ? "Lo que pasa si es True" : "Lo que pasa si es False"
+
+
+
+
